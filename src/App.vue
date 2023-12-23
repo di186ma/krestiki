@@ -15,7 +15,7 @@ export default {
 </script>
 
 <style>
-/* глобальные стили по желанию */
+
 body {
   font-family: 'Arial', sans-serif;
   text-align: center;

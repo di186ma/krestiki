@@ -36,19 +36,19 @@ export default {
       }
 
       this.board[row][col] = this.xIsNext ? 'X' : 'O';
-        this.xIsNext = !this.xIsNext;
-        this.winner = this.calculateWinner(this.board);
+      this.xIsNext = !this.xIsNext;
+      this.winner = this.calculateWinner(this.board);
       },
       calculateWinner(board) {
   const lines = [
-    [0, 0, 0, 1, 0, 2], // top row
-    [1, 0, 1, 1, 1, 2], // middle row
-    [2, 0, 2, 1, 2, 2], // bottom row
-    [0, 0, 1, 0, 2, 0], // left column
-    [0, 1, 1, 1, 2, 1], // middle column
-    [0, 2, 1, 2, 2, 2], // right column
-    [0, 0, 1, 1, 2, 2], // main diagonal
-    [0, 2, 1, 1, 2, 0]  // secondary diagonal
+    [0, 0, 0, 1, 0, 2], 
+    [1, 0, 1, 1, 1, 2], 
+    [2, 0, 2, 1, 2, 2], 
+    [0, 0, 1, 0, 2, 0], 
+    [0, 1, 1, 1, 2, 1], 
+    [0, 2, 1, 2, 2, 2], 
+    [0, 0, 1, 1, 2, 2],
+    [0, 2, 1, 1, 2, 0]  
   ];
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c, d, e, f] = lines[i];
